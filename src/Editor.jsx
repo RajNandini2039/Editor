@@ -16,7 +16,7 @@ import {
   FaStrikethrough,
 } from "react-icons/fa";
 import { FaListCheck } from "react-icons/fa6";
-import "./Editor.css";
+import "./editor.css";
 
 const Editor = ({ onEmptyNotes }) => {
   const [title, setTitle] = useState("");
