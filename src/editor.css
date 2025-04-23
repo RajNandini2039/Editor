@@ -1,0 +1,221 @@
+/* === Container Layout === */
+.editor-container {
+    display: flex;
+    height: 100vh;
+    background: #f9fafb;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* === Sidebar === */
+  .sidebar {
+    width: 18rem;
+    background: #1f2937; /* dark gray */
+    color: white;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .sidebar-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #93c5fd;
+  }
+  
+  .icon-button,
+  .delete-button,
+  .clear-note-button {
+    color: #60a5fa;
+    font-size: 1rem;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .clear-note-button {
+    color: #f87171;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  .title-input {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: none;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  .notes-list {
+    margin-top: 1rem;
+    flex-grow: 1;
+    overflow-y: auto;
+  }
+  
+  .note-item {
+    background: #374151;
+    padding: 0.75rem;
+    border-radius: 6px;
+    margin-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #e5e7eb;
+    transition: background 0.3s;
+  }
+  
+  .note-item:hover {
+    background: #4b5563;
+  }
+  
+  /* === Editor Panel === */
+  .editor-panel {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background: white;
+  }
+  
+  /* === Toolbar === */
+  .toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e5e7eb;
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid #cbd5e1;
+  }
+  
+  .toggle-tab {
+    font-weight: 600;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    padding: 0.5rem;
+    color: #334155;
+  }
+  
+  .toggle-tab.active {
+    color: #2563eb;
+    border-bottom: 2px solid #2563eb;
+  }
+  
+  .toolbar-icons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: #1e40af;
+  }
+  
+  .toolbar-icons svg:hover {
+    color: #2563eb;
+    transform: scale(1.2);
+    transition: all 0.2s ease-in-out;
+  }
+  
+  .toolbar-grp {
+    display: flex;
+    gap: 1rem;
+    margin-right: 1rem;
+  }
+  
+  /* === Editor Body === */
+  .editor-body {
+    position: relative;
+    flex: 1;
+  }
+  
+  .editor-textarea {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    font-size: 1rem;
+    border: none;
+    outline: none;
+    resize: none;
+    font-family: 'Fira Code', monospace;
+  }
+  
+  /* === Preview Area === */
+  .editor-preview {
+    padding: 1.5rem;
+    overflow-y: auto;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  .visible {
+    display: block;
+  }
+  
+  /* === Markdown Styles === */
+  .markdown-content {
+    color: #1f2937;
+    line-height: 1.7;
+  }
+  
+  .markdown-content h1,
+  .markdown-content h2,
+  .markdown-content h3 {
+    color: #1e3a8a;
+  }
+  
+  .markdown-content blockquote {
+    background: #f1f5f9;
+    padding: 1rem;
+    border-left: 4px solid #60a5fa;
+    font-style: italic;
+  }
+  
+  .markdown-content code {
+    background: #e2e8f0;
+    padding: 0.2rem 0.5rem;
+    border-radius: 5px;
+    font-family: 'Courier New', monospace;
+  }
+  
+  .markdown-content a {
+    color: #3b82f6;
+    text-decoration: underline;
+  }
+  
+  .markdown-content ul,
+  .markdown-content ol {
+    padding-left: 1.25rem;
+  }
+  
+  .markdown-content input[type="checkbox"] {
+    transform: scale(1.1);
+    margin-right: 0.5rem;
+  }
+  
+  /* === Mobile === */
+  @media (max-width: 768px) {
+    .sidebar {
+      width: 100px;
+      padding: 0.5rem;
+    }
+  
+    .toolbar-icons {
+      gap: 0.5rem;
+    }
+  
+    .note-item {
+      font-size: 0.8rem;
+      padding: 0.5rem;
+    }
+  
+    .editor-textarea {
+      padding: 0.75rem;
+      font-size: 0.875rem;
+    }
+  
+    .editor-preview {
+      padding: 1rem;
+    }
+  }
+  
